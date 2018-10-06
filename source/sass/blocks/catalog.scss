@@ -1,0 +1,118 @@
+.catalog {
+  margin-bottom: 25px;
+
+  &__wrapper {
+    padding: 0 20px;
+  }
+
+  &__list {
+    @include list-reset;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    width: 100%;
+    padding: 22px 20px;
+    margin-bottom: 20px;
+    background-color: $bg-grey;
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    padding: 15px 0 0 70px;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #111111;
+    text-transform: uppercase;
+
+    &--pro,
+    &--slim {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        background-color: $green;
+      }
+    }
+
+    &--slim {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 10px;
+        width: 35px;
+        height: 49px;
+        background-image: url("../img/icon-cat-slim.svg");
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--pro {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: -10px;
+        width: 67px;
+        height: 28px;
+        background-image: url("../img/icon-cat-pro.svg");
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__text {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 22px;
+    font-family: "Arial";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #444444;
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  &__link {
+    display: inline-block;
+    position: relative;
+    color: #111111;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin-top: 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      right: -36px;
+      width: 24px;
+      height: 11px;
+      background-image: url("../img/icon-right-arrow-long.svg");
+      background-repeat: no-repeat;
+    }
+
+    &:hover::after {
+      right: -45px;
+      width: 33px;
+      height: 11px;
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+      background-repeat: no-repeat;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}

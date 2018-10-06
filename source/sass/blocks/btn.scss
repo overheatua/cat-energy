@@ -1,0 +1,22 @@
+.btn {
+  display: inline-block;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $green;
+  padding: 10px 0;
+
+  &:hover,
+  &:active {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
