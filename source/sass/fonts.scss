@@ -1,0 +1,48 @@
+/* cyrillic */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Oswald Regular"), local("Oswald-Regular"), url("../fonts/oswald-regular-cyrillic.woff2") format("woff2"), url("../fonts/oswald-regular-cyrillic.woff") format("woff");
+  unicode-range: u+0400-045f, u+0490-0491, u+04b0-04b1, u+2116;
+}
+ /* latin */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Oswald Regular"), local("Oswald-Regular"), url("../fonts/oswald-regular-latin.woff2") format("woff2"), url("../fonts/oswald-regular-latin.woff") format("woff");
+  unicode-range: u+0000-00ff, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2212, u+2215;
+}
+ /* cyrillic */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Oswald Medium"), local("Oswald Medium"), url("../fonts/oswald-medium-cyrillic.woff2") format("woff2"), url("../fonts/oswald-medium-cyrillic.woff") format("woff");
+  unicode-range: u+0400-045f, u+0490-0491, u+04b0-04b1, u+2116;
+}
+ /* latin */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Oswald Medium"), local("Oswald Medium"), url("../fonts/oswald-medium-latin.woff2") format("woff2"), url("../fonts/oswald-medium-latin.woff") format("woff");
+  unicode-range: u+0000-00ff, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2212, u+2215;
+}
+ /* cyrillic */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Oswald Bold"), local("Oswald Bold"), url("../fonts/oswald-bold-cyrillic.woff2") format("woff2"), url("../fonts/oswald-bold-cyrillic.woff") format("woff");
+  unicode-range: u+0400-045f, u+0490-0491, u+04b0-04b1, u+2116;
+}
+ /* latin */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Oswald Bold"), local("Oswald Bold"), url("../fonts/oswald-bold-latin.woff2") format("woff2"), url("../fonts/oswald-bold-latin.woff") format("woff");
+  unicode-range: u+0000-00ff, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2212, u+2215;
+}
