@@ -1,17 +1,20 @@
-html,
-body {
+body,
+html {
   padding: 0;
   margin: 0;
 }
- html {
+
+html {
   box-sizing: border-box;
 }
+
 *,
-*::before,
-*::after {
+*::after,
+*::before {
   box-sizing: inherit;
 }
- body {
+
+body {
   width: auto;
   margin: 0 auto;
   font-size: 16px;
@@ -21,21 +24,55 @@ body {
   font-weight: normal;
   color: $grey;
 }
- img {
+
+img {
   max-width: 100%;
   height: auto;
 }
- a {
+
+a {
   color: #111111;
   text-decoration: none;
 }
- .no-overflow {
+
+input[type="text"],
+input[type="tel"],
+input[type="number"] {
+  width: 100%;
+  flex-grow: 1;
+  padding: 10px 15px;
+  color: #444444;
+  font-family: "Oswald";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  border: 1px solid #e6e6e6;
+  outline: none;
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    border: 2px solid #444444;
+    padding: 9px 14px;
+  }
+
+  &:invalid {
+    border: 2px solid #ff8282;
+    padding: 9px 14px;
+  }
+}
+
+.no-overflow {
   position: fixed;
   height: 100%;
   overflow: hidden;
   width: 100%;
 }
- .visually-hidden {
+
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
