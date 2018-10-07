@@ -1,0 +1,14 @@
+.page-main {
+  &--catalog .page-main__title {
+    margin: 0;
+    padding: 0;
+    padding: 25px;
+    color: #111;
+    min-height: 103px;
+
+font-size: 36px;
+font-weight: 400;
+line-height: 50px;
+    border-bottom: 1px solid #ededed;
+  }
+}

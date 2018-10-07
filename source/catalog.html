@@ -6,21 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML Academy: Каталог продукции</title>
-  <link href="css/normalize.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="page-header">
-
+    <nav class="main-nav main-nav--closed">
+      <div class="main-nav__wrapper">
+        <div class="main-nav__logo">
+          <img class="main-nav__img main-nav__img--logo" src="img/logo-mobile.svg" alt="Лого Кэт энерджи" width="22" height="38">
+          <a href="index.html" class="main-nav__link">
+            <img class="main-nav__img" src="img/logo-mobile-header.svg" alt="Кэт энерджи" width="101" height="18">
+          </a>
+        </div>
+        <ul class="main-nav">
+          <li class="main-nav__item main-nav__item--logo">
+            <img class="main-nav__img main-nav__img--logo" src="img/logo-mobile.svg" alt="Лого Кэт энерджи" width="22" height="38">
+            <a href="index.html" class="main-nav__link">
+              <img class="main-nav__img" src="img/logo-mobile-header.svg" alt="Кэт энерджи" width="101" height="18">
+            </a>
+          </li>
+          <li class="main-nav__item site-nav__item--active"><a href="index.html" class="main-nav__link">Главная</a></li>
+          <li class="main-nav__item"><a href="catalog.html" class="main-nav__link">Каталог продукции</a></li>
+          <li class="main-nav__item"><a href="" class="main-nav__link">Подбор программы</a></li>
+        </ul>
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+      </div>
+    </nav>
   </header>
-  <main class="page-main">
-    <section class="products">
-      <h1 class="page-main__title">Каталог продукции</h1>
+  <main class="page-main page-main--catalog">
+    <h1 class="page-main__title">Каталог продукции</h1>
+    <section class="product">
       <h2 class="visually-hidden">Список кормов</h2>
       <ul class="product__list">
         <li class="product__item">
           <a href="" class="product__link">
-            <img src="" alt="Cat Energy Pro 500">
+            <img src="img/chicken-small-mobile@1x.jpg" alt="Cat Energy Pro 500">
           </a>
           <div class="product__info">
             <a href="" class="product__link">
@@ -41,11 +62,11 @@
               </tr>
             </table>
           </div>
-          <a href="" class="btn">Заказать</a>
+          <a href="" class="product__btn btn">Заказать</a>
         </li>
         <li class="product__item">
           <a href="" class="product__link">
-            <img src="" alt="Cat Energy Pro 1000">
+            <img src="img/chicken-big-mobile@1x.jpg" alt="Cat Energy Pro 1000">
           </a>
           <div class="product__info">
             <a href="" class="product__link">
@@ -66,11 +87,11 @@
               </tr>
             </table>
           </div>
-          <a href="" class="btn">Заказать</a>
+          <a href="" class="product__btn btn">Заказать</a>
         </li>
         <li class="product__item">
           <a href="" class="product__link">
-            <img src="" alt="Cat Energy Pro 500 рыба">
+            <img src="img/fish-small-mobile@1x.jpg" alt="Cat Energy Pro 500 рыба">
           </a>
           <div class="product__info">
             <a href="" class="product__link">
@@ -91,11 +112,11 @@
               </tr>
             </table>
           </div>
-          <a href="" class="btn">Заказать</a>
+          <a href="" class="product__btn btn">Заказать</a>
         </li>
         <li class="product__item">
           <a href="" class="product__link">
-            <img src="" alt="Cat Energy Pro 1000 рыба">
+            <img src="img/fish-big-mobile@1x.jpg" alt="Cat Energy Pro 1000 рыба">
           </a>
           <div class="product__info">
             <a href="" class="product__link">
@@ -116,11 +137,11 @@
               </tr>
             </table>
           </div>
-          <a href="" class="btn">Заказать</a>
+          <a href="" class="product__btn btn">Заказать</a>
         </li>
         <li class="product__item">
           <a href="" class="product__link">
-            <img src="" alt="Cat Energy Slim 500">
+            <img src="img/buckwheat-small-mobile@1x.jpg" alt="Cat Energy Slim 500">
           </a>
           <div class="product__info">
             <a href="" class="product__link">
@@ -141,11 +162,11 @@
               </tr>
             </table>
           </div>
-          <a href="" class="btn">Заказать</a>
+          <a href="" class="product__btn btn">Заказать</a>
         </li>
         <li class="product__item">
           <a href="" class="product__link">
-            <img src="" alt="Cat Energy Slim 1000">
+            <img src="img/buckwheat-big-mobile@1x.jpg" alt="Cat Energy Slim 1000">
           </a>
           <div class="product__info">
             <a href="" class="product__link">
@@ -166,11 +187,11 @@
               </tr>
             </table>
           </div>
-          <a href="" class="btn">Заказать</a>
+          <a href="" class="product__btn btn">Заказать</a>
         </li>
         <li class="product__item">
           <a href="" class="product__link">
-            <img src="" alt="Cat Energy Slim 500">
+            <img src="img/rice-small-mobile@1x.jpg" alt="Cat Energy Slim 500">
           </a>
           <div class="product__info">
             <a href="" class="product__link">
@@ -191,18 +212,21 @@
               </tr>
             </table>
           </div>
-          <a href="" class="btn">Заказать</a>
+          <a href="" class="product__btn btn">Заказать</a>
         </li>
         <li class="product__item show-more">
           <a href="" class="show-more__link" aria-label="Показать все товары"></a>
           <p class="show-more__desc">Показать ещё 100500 товаров</p>
           <span class="show-more__text">На самом деле вкусов гораздо больше!</span>
-          <a href="" class="btn">Показать все</a>
+          <a href="" class="show-more__btn btn">Показать все</a>
         </li>
       </ul>
     </section>
-    <section class="extra-products">
-      <h2 class="extra-produts__title">Дополнительные товары</h2>
+    <section class="extra-product">
+      <div class="extra-product__wrapper">
+        <h2 class="extra-product__title">Дополнительные товары</h2>
+        <span class="extra-product__line"></span>
+      </div>
       <ul class="extra-product__list">
         <li class="extra-product__item">
           <strong class="extra-product__name">Сахарозаменитель</strong>
@@ -246,24 +270,50 @@
         </li>
       </ul>
       <div class="extra-product__promo">
-        <img src="" alt="">
+        <img class="extra-product__promo-icon" src="img/icon-gift.svg" alt="Gift-promo">
         <a href="#" class="extra-product__promo-link">Закажите все
           <br>и получите чехол для кота в подарок!
         </a>
       </div>
     </section>
-    <section class="contacts">
+    <section class="contacts contacts--catalog">
       <div class="contacts__info">
         <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <p class="contacts__text">ул. Большая Конюшенная, д. 19/8</p>
-        <span class="contacts__city">Санкт-Петербург</span>
+        <div class="contacts__wrapper">
+          <p class="contacts__text">ул. Большая Конюшенная, д. 19/8</p>
+          <span class="contacts__city">Санкт-Петербург</span>
+        </div>
       </div>
       <div class="contacts__map"></div>
     </section>
   </main>
   <footer class="page-footer">
-
+    <div class="footer-logo">
+      <a href="index.html" class="footer-logo__link">
+        <img src="img/logo-footer.svg" alt="Лого" class="footer-logo__img">
+      </a>
+    </div>
+    <div class="footer-social">
+      <ul class="footer-social__list">
+        <li class="footer-social__item"><a href="" class="footer-social__link footer-social__link--vk"></a>
+          <span class="visually-hidden">Вконтакте</span>
+        </li>
+        <li class="footer-social__item"><a href="" class="footer-social__link footer-social__link--inst"></a>
+          <span class="visually-hidden">Инстаграм</span>
+        </li>
+        <li class="footer-social__item"><a href="" class="footer-social__link footer-social__link--fb"></a>
+          <span class="visually-hidden">Фейсбук</span>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-copyright">
+      <a href="" class="footer-copyright__link">
+        <span class="copyright__text">HTML Academy</span>
+      </a>
+      <img src="img/logo-htmlacademy.svg" alt="HTML Academy" class="footer-copyright__img">
+    </div>
   </footer>
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
