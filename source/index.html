@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -10,26 +11,22 @@
 <body>
   <header class="page-header">
     <nav class="main-nav main-nav--closed">
-      <div class="main-nav__wrapper">
-        <div class="main-nav__logo">
+      <ul class="main-nav__list">
+        <li class="main-nav__item main-nav__item--menu">
           <img class="main-nav__img main-nav__img--logo" src="img/logo-mobile.svg" alt="Лого Кэт энерджи" width="22" height="38">
           <a href="index.html" class="main-nav__link">
-            <img class="main-nav__img" src="img/logo-mobile-header.svg" alt="Кэт энерджи" width="101" height="18">
-          </a>
-        </div>
-        <ul class="main-nav">
-          <li class="main-nav__item main-nav__item--logo">
-            <img class="main-nav__img main-nav__img--logo" src="img/logo-mobile.svg" alt="Лого Кэт энерджи" width="22" height="38">
-            <a href="index.html" class="main-nav__link">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
               <img class="main-nav__img" src="img/logo-mobile-header.svg" alt="Кэт энерджи" width="101" height="18">
-            </a>
-          </li>
-          <li class="main-nav__item site-nav__item--active"><a href="index.html" class="main-nav__link">Главная</a></li>
-          <li class="main-nav__item"><a href="catalog.html" class="main-nav__link">Каталог продукции</a></li>
-          <li class="main-nav__item"><a href="form.html" class="main-nav__link">Подбор программы</a></li>
-        </ul>
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-      </div>
+            </picture>
+          </a>
+        </li>
+        <li class="main-nav__item main-nav__item--active"><a href="index.html" class="main-nav__link main-nav__link--active">Главная</a></li>
+        <li class="main-nav__item"><a href="catalog.html" class="main-nav__link">Каталог продукции</a></li>
+        <li class="main-nav__item"><a href="form.html" class="main-nav__link">Подбор программы</a></li>
+      </ul>
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
     </nav>
   </header>
   <main class="page-main">
@@ -38,7 +35,11 @@
       <div class="promo__wrapper">
         <h2 class="promo__title">Функциональное питание для котов</h2>
         <p class="promo__text">Занялся собой? Займись котом!</p>
-        <img src="img/index-can-mobile@1x.png" alt="банка" class="promo__img">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png">
+          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
+          <img src="img/index-can-mobile@1x.png" alt="банка" class="promo__img">
+        </picture>
         <a href="" class="promo__link btn">Подобрать программу</a>
       </div>
     </section>
@@ -76,7 +77,7 @@
       </ul>
     </section>
     <section class="example">
-      <div class="example-info">
+      <div class="example__info">
         <h2 class="example__title">Живой пример</h2>
         <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
         <div class="example__statistics">
@@ -99,16 +100,11 @@
         </div>
       </div>
       <div class="example-range">
-        <div class="example-range__images">
-          <img src="img/before-mobile@1x.png" alt="До" class="example-range__img">
-          <img src="img/after-mobile@1x.png" alt="После" class="example-range__img">
-        </div>
-        <div class="example-range__controls">
-          <input type="button" id="toggle-1" class="example-range__toggle example-range__toogle--active" value="Было">
-          <div class="example-range__bar">
-
-          </div>
-          <input type="button" id="toggle-2" class="example-range__toggle" value="Стало">
+        <div id="comparison">
+          <figure>
+            <div id="divisor"></div>
+          </figure>
+          <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
         </div>
       </div>
     </section>
@@ -120,7 +116,9 @@
           <span class="contacts__city">Санкт-Петербург</span>
         </div>
       </div>
-      <div class="contacts__map"></div>
+      <div class="contacts__map">
+        <div id="map"></div>
+      </div>
     </section>
   </main>
   <footer class="page-footer">
@@ -146,10 +144,11 @@
       <a href="" class="footer-copyright__link">
         <span class="copyright__text">HTML Academy</span>
       </a>
-        <img src="img/logo-htmlacademy.svg" alt="HTML Academy" class="footer-copyright__img">
+      <img src="img/logo-htmlacademy.svg" alt="HTML Academy" class="footer-copyright__img">
     </div>
   </footer>
   <script type="text/javascript" src="js/script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAu7JSlK2lCFBxPRz755qtSU3GS-wyYeYQ&callback=initMap" async defer></script>
 </body>
 
 </html>

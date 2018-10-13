@@ -22,9 +22,10 @@
     position: relative;
     margin: 0;
     padding: 15px 0 0 70px;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     font-size: 24px;
     font-weight: 400;
+    line-height: 26px;
     color: #111111;
     text-transform: uppercase;
 
@@ -114,5 +115,137 @@
     &:active {
       opacity: 0.3;
     }
+  }
+}
+@media (min-width: $tablet-width) {
+  .catalog {
+    margin-bottom: 35px;
+
+    &__wrapper {
+      padding: 0 30px;
+    }
+
+    &__item {
+      padding: 65px 55px 60px;
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      padding: 0 40% 0 0;
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 37px;
+
+      &--pro,
+      &--slim {
+        &::before {
+          width: 200px;
+          height: 200px;
+          left: auto;
+          top: 0;
+          right: 0;
+          border-radius: 50%;
+          background-color: $green;
+        }
+      }
+
+      &--slim {
+        &::after {
+          left: auto;
+          top: 0;
+          right: 25px;
+          width: 140px;
+          height: 194px;
+        }
+      }
+
+      &--pro {
+        &::after {
+          left: auto;
+          top: 45px;
+          right: -27px;
+          width: 268px;
+          height: 112px;
+        }
+      }
+    }
+
+    &__text {
+      max-width: 60%;
+      font-size: 16px;
+      line-height: 24px;
+      border-bottom: 0;
+    }
+
+    &__link {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+}
+@media (min-width: $desktop-width) {
+  .catalog {
+    &__wrapper {
+      max-width: 1440px;
+      padding: 0 110px;
+      margin: 0 auto;
+    }
+
+    &__list {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__item {
+      width: 570px;
+      min-height: 372px;
+      padding: 47px 52px;
+    }
+
+    &__title {
+      padding: 28px 0 35px 165px;
+      margin-bottom: 40px;
+
+      &--pro,
+      &--slim {
+        &::before {
+          width: 100px;
+          height: 100px;
+          left: 0;
+          top: 0;
+          right: auto;
+          border-radius: 50%;
+          background-color: $green;
+        }
+      }
+
+      &--slim {
+        &::after {
+          left: 20px;
+          top: 0;
+          right: auto;
+          width: 70px;
+          height: 97px;
+        }
+      }
+
+      &--pro {
+        &::after {
+          left: -20px;
+          top: 27px;
+          right: auto;
+          width: 134px;
+          height: 56px;
+        }
+      }
+    }
+
+    &__text {
+      max-width: none;
+      padding: 0;
+      margin-bottom: 30px;
+    }
+
+    &__link {}
   }
 }

@@ -1,6 +1,5 @@
 .example {
   padding: 25px 20px;
-  margin-bottom: 25px;
   background-color: #f2f2f2;
 
   &__title {
@@ -21,8 +20,6 @@
     font-weight: 400;
     line-height: 18px;
   }
-
-  &__statistics {}
 
   &__list {
     @include list-reset;
@@ -86,4 +83,80 @@
     font-size: 14px;
     text-transform: uppercase;
   }
+}
+@media (min-width: $tablet-width) {
+  .example {
+    border-top: 1px solid #e6e6e6;
+    background-color: #ffffff;
+padding: 0;
+    &__info {
+      padding: 45px 30px 0;
+    }
+
+    &__title {
+      font-size: 60px;
+      line-height: 60px;
+      margin-bottom: 60px;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 54px;
+    }
+
+    &__list {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    &__item {
+      width: 162px;
+      min-height: 72px;
+
+      &--amount {
+        width: auto;
+        padding: 10px;
+        margin-left: auto;
+        text-align: right;
+      }
+
+      &:first-child {
+        margin-right: 42px;
+      }
+    }
+
+    &__quantity {
+      font-size: 30px;
+      line-height: 65px;
+    }
+
+    &__item-text {
+      width: 129px;
+      min-width: 114px;
+      height: auto;
+      padding: 0 10px;
+      bottom: -6px;
+      left: 14px;
+      background-color: #ffffff;
+    }
+
+    &__item-amount {
+      width: 200px;
+    }
+
+    &__item-amount .example__quantity {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    &__item-amount .example__item-text {
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+}
+@media (min-width: $desktop-width) {
+  .example {}
 }

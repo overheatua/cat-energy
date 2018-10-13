@@ -1,11 +1,12 @@
 .main-nav {
-  @include list-reset;
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  &__list {
+    @include list-reset;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
 
-  &--closed .main-nav__toggle,
-  &--opened .main-nav__toggle {
+  &__toggle {
     display: block;
     position: absolute;
     top: 23px;
@@ -61,28 +62,6 @@
     }
   }
 
-  &--closed .main-nav {
-    display: none;
-  }
-
-  &--opened .main-nav {
-    display: flex;
-  }
-
-  &--closed .main-nav__logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 65px;
-    padding: 15px;
-    border-bottom: 1px solid #e6e6e6;
-    font-size: 20px;
-  }
-
-  &--opened .main-nav__logo {
-    display: none;
-  }
-
   &__item {
     display: flex;
     justify-content: center;
@@ -111,16 +90,103 @@
       opacity: 0.3;
     }
   }
+}
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .main-nav__item {
+    display: none;
 
-  &__img {
-    width: 101px;
-    height: 18px;
+    &--menu {
+      display: flex;
+    }
   }
 
-  &__img--logo {
-    position: absolute;
-    width: 33px;
-    height: 38px;
-    left: 20px;
+  .main-nav {
+    &__img {
+      width: 101px;
+      height: 18px;
+    }
+
+    &__img--logo {
+      position: absolute;
+      width: 33px;
+      height: 38px;
+      left: 20px;
+    }
+  }
+}
+@media (min-width: $tablet-width) {
+  .main-nav {
+    &__list {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__toggle {
+      display: none;
+    }
+    &__img {
+      width: 173px;
+      height: 58px;
+    }
+
+    &__img--logo {
+      display: none;
+    }
+
+    &__item {
+      width: auto;
+      justify-content: flex-start;
+      border: 0;
+      padding: 0;
+      margin-right: 37px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &--active {
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          left: 0;
+          bottom: 20px;
+          height: 2px;
+          background: #68b738;
+        }
+      }
+
+      &--menu {
+        flex-grow: 1;
+      }
+    }
+
+    &__link {
+      color: #222222;
+      font-size: 18px;
+      font-weight: 400;
+      padding: 12px 0;
+    }
+  }
+}
+@media (min-width: $desktop-width) {
+  .main-nav {
+    &__img {
+      width: 202px;
+      height: 59px;
+    }
+
+    &__item {
+      &--active::after {
+        background: #ffffff;
+      }
+    }
+
+    &__link {
+      color: white;
+      font-size: 20px;
+    }
   }
 }

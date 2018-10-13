@@ -1,7 +1,6 @@
 .footer-logo {
   width: 100%;
   min-height: 62px;
-  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,5 +15,11 @@
     &:active {
       opacity: 0.6;
     }
+  }
+}
+@media (min-width: $tablet-width) {
+  .footer-logo {
+    justify-content: flex-start;
+    border-bottom: 0;
   }
 }

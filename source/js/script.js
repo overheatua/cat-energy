@@ -10,3 +10,26 @@ navToggle.addEventListener('click', function() {
     navMain.classList.remove('main-nav--opened');
   }
 });
+
+var divisor = document.getElementById("divisor"),
+slider = document.getElementById("slider");
+function moveDivisor() {
+	divisor.style.width = slider.value+"%";
+}
+
+
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 50.116477, lng: 30.636405},
+    zoom: 17,
+    disableDefaultUI: true
+  });
+
+  var image = 'img/map-pin.png';
+  var beachMarker = new google.maps.Marker({
+    position: {lat: 50.116477, lng: 30.636405},
+    map: map,
+    icon: image
+  });
+}

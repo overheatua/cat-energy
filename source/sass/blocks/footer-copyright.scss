@@ -18,3 +18,12 @@
     height: 34px;
   }
 }
+@media (min-width: $tablet-width) {
+  .footer-copyright {
+    justify-content: flex-end;
+
+    &__img {
+      margin-left: 25px;
+    }
+  }
+}
