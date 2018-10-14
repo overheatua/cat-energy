@@ -46,3 +46,41 @@
     }
   }
 }
+@media (min-width: $tablet-width) {
+  .show-more {
+    justify-content: flex-start;
+    padding: 55px 38px 40px;
+    background-color: #ffffff;
+    border: 1px solid #e6e6e6;
+
+    &__link {
+      width: 60px;
+      height: 60px;
+      background: url("../img/icon-plus.svg") no-repeat;
+      opacity: 0.2;
+      margin-bottom: 47px;
+    }
+
+    &__desc {
+      width: 140px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    &__text {
+      width: 170px;
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 28px;
+      text-align: center;
+      margin-bottom: 85px;
+    }
+  }
+}
+@media (min-width: $desktop-width) {
+  .show-more {
+    &__desc {
+      margin-top: 0;
+    }
+  }
+}
