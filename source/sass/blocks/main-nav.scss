@@ -124,6 +124,7 @@
     &__toggle {
       display: none;
     }
+
     &__img {
       width: 173px;
       height: 58px;
@@ -138,7 +139,7 @@
       justify-content: flex-start;
       border: 0;
       padding: 0;
-      margin-right: 37px;
+      margin-right: 36px;
 
       &:last-child {
         margin-right: 0;
@@ -179,13 +180,28 @@
     }
 
     &__item {
+      margin-right: 35px;
+
       &--active::after {
-        background: #ffffff;
+        bottom: 8px;
+        background-color: #68b738;
       }
     }
 
-    &__link {
+    &--index .main-nav__item--active::after {
+      background: #ffffff;
+    }
+
+    &--index .main-nav__link {
       color: white;
+    }
+
+    &__link {
+      color: #111111;
+    }
+
+    &__link {
+      padding: 0;
       font-size: 20px;
     }
   }

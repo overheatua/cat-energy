@@ -10,6 +10,9 @@
 </head>
 
 <body>
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
   <header class="page-header">
     <nav class="main-nav main-nav--closed">
       <ul class="main-nav__list">
@@ -44,11 +47,11 @@
                 <input id="cat-name" class="form__input" type="text" name="cat-name" value="" placeholder="Барсик">
               </li>
               <li class="form__item">
-                <label for="cat-weight" class="form__label">Вес (кг):*</label>
+                <label for="cat-weight" class="form__label">Вес&nbsp;(кг):*</label>
                 <input id="cat-weight" class="form__input" type="number" name="cat-weight" value="" placeholder="7">
               </li>
               <li class="form__item">
-                <label for="cat-age" class="form__label">Возраст (лет):</label>
+                <label for="cat-age" class="form__label">Возраст&nbsp;(лет):</label>
                 <input id="cat-age" class="form__input" type="number" name="cat-age" value="" placeholder="7">
               </li>
             </ul>
@@ -77,12 +80,18 @@
             </div>
             <ul class="form__list">
               <li class="form__item">
-                <label for="user-email" class="form__label">E-mail:*</label>
+                <label for="user-email" class="form__label">E&#8209;mail:*</label>
                 <input id="user-email" type="text" class="form__input" name="user-email" placeholder="kuklachev@gmail.com" required>
+                <svg class="form__icon" width="17" height="13">
+                  <use xlink:href="#s-icon-mail"></use>
+                </svg>
               </li>
               <li class="form__item">
                 <label for="user-tel" class="form__label">Телефон:*</label>
                 <input id="user-tel" type="tel" class="form__input" name="user-tel" placeholder="8 (960) 900-60-90" required>
+                <svg class="form__icon" width="20" height="20">
+                  <use xlink:href="#s-icon-phone"></use>
+                </svg>
               </li>
             </ul>
           </fieldset>
@@ -139,29 +148,46 @@
     </section>
   </main>
   <footer class="page-footer">
-    <div class="footer-logo">
-      <a href="index.html" class="footer-logo__link">
-        <img src="img/logo-footer.svg" alt="Лого" class="footer-logo__img">
-      </a>
-    </div>
-    <div class="footer-social">
-      <ul class="footer-social__list">
-        <li class="footer-social__item"><a href="" class="footer-social__link footer-social__link--vk"></a>
-          <span class="visually-hidden">Вконтакте</span>
-        </li>
-        <li class="footer-social__item"><a href="" class="footer-social__link footer-social__link--inst"></a>
-          <span class="visually-hidden">Инстаграм</span>
-        </li>
-        <li class="footer-social__item"><a href="" class="footer-social__link footer-social__link--fb"></a>
-          <span class="visually-hidden">Фейсбук</span>
-        </li>
-      </ul>
-    </div>
-    <div class="footer-copyright">
-      <a href="" class="footer-copyright__link">
-        <span class="copyright__text">HTML Academy</span>
-      </a>
-      <img src="img/logo-htmlacademy.svg" alt="HTML Academy" class="footer-copyright__img">
+    <div class="page-footer__wrapper">
+      <div class="footer-logo">
+        <a href="index.html" class="footer-logo__link">
+          <img src="img/logo-footer.svg" alt="Лого" class="footer-logo__img">
+        </a>
+      </div>
+      <div class="footer-social">
+        <ul class="footer-social__list">
+          <li class="footer-social__item">
+            <a href="" class="footer-social__link footer-social__link--vk">
+              <svg class="footer-social__icon footer-social__icon--vk" width="22" height="12">
+                <use xlink:href="#s-icon-vk"></use>
+              </svg>
+            </a>
+            <span class="visually-hidden">Вконтакте</span>
+          </li>
+          <li class="footer-social__item"><a href="" class="footer-social__link footer-social__link--inst">
+              <svg class="footer-social__icon footer-social__icon--inst" width="16" height="16">
+                <use xlink:href="#s-icon-insta"></use>
+              </svg>
+            </a>
+            <span class="visually-hidden">Инстаграм</span>
+          </li>
+          <li class="footer-social__item"><a href="" class="footer-social__link footer-social__link--fb">
+              <svg class="footer-social__icon footer-social__icon--fb" width="10" height="19">
+                <use xlink:href="#s-icon-fb"></use>
+              </svg>
+            </a>
+            <span class="visually-hidden">Фейсбук</span>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-copyright">
+        <a href="" class="footer-copyright__link">
+          <span class="copyright__text">HTML Academy</span>
+        </a>
+        <svg class="footer-copyright__img" width="27" height="34">
+          <use xlink:href="#s-icon-htmlacademy"></use>
+        </svg>
+      </div>
     </div>
   </footer>
   <script type="text/javascript" src="js/script.min.js"></script>

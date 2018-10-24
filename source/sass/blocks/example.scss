@@ -3,12 +3,13 @@
   background-color: #f2f2f2;
 
   &__title {
-    margin: 0 0 25px;
-    padding: 0;
+    margin: 0;
+    padding: 25px 20px 8px;
     color: #111111;
     font-size: 36px;
     font-weight: 400;
     line-height: 40px;
+    background-color: #f2f2f2;
   }
 
   &__text {
@@ -35,12 +36,13 @@
     min-height: 56px;
     border: 1px solid #cdcdcd;
     border-radius: 3px;
-    margin-bottom: 25px;
+    margin-bottom: 19px;
 
     &--amount {
       width: 100%;
       border: 0;
       padding: 15px;
+      margin-bottom: 0;
     }
   }
 
@@ -54,8 +56,8 @@
 
   &__item-text {
     position: absolute;
-    bottom: -7px;
-    left: 17px;
+    bottom: -11px;
+    left: 19px;
     text-align: center;
     width: 82px;
     height: 19px;
@@ -86,23 +88,26 @@
 }
 @media (min-width: $tablet-width) {
   .example {
-    border-top: 1px solid #e6e6e6;
     background-color: #ffffff;
-padding: 0;
+    padding: 0;
+
     &__info {
-      padding: 45px 30px 0;
+      padding: 0 30px;
     }
 
     &__title {
+      border-top: 1px solid #e6e6e6;
       font-size: 60px;
       line-height: 60px;
-      margin-bottom: 60px;
+      padding: 45px 30px 64px;
+      margin-top: -32px;
+      background-color: #ffffff;
     }
 
     &__text {
       font-size: 16px;
       line-height: 24px;
-      margin-bottom: 54px;
+      margin-bottom: 53px;
     }
 
     &__list {
@@ -117,7 +122,7 @@ padding: 0;
 
       &--amount {
         width: auto;
-        padding: 10px;
+        padding: 10px 0;
         margin-left: auto;
         text-align: right;
       }
@@ -137,13 +142,13 @@ padding: 0;
       min-width: 114px;
       height: auto;
       padding: 0 10px;
-      bottom: -6px;
+      bottom: -5px;
       left: 14px;
       background-color: #ffffff;
     }
 
     &__item-amount {
-      width: 200px;
+      width: 190px;
     }
 
     &__item-amount .example__quantity {
@@ -153,10 +158,78 @@ padding: 0;
 
     &__item-amount .example__item-text {
       font-size: 20px;
-      line-height: 27px;
+      line-height: 36px;
+      padding: 0;
     }
   }
 }
 @media (min-width: $desktop-width) {
-  .example {}
+  .example {
+    border-top: 0;
+    background-color: #f2f2f2;
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 110px;
+    }
+
+    &__title {
+      border-top: 0;
+      max-width: 1440px;
+          padding: 77px 110px;
+      margin: 0 auto;
+    }
+
+    &__info {
+      width: 570px;
+      min-height: 462px;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+
+    &__text {
+      width: 450px;
+      margin-top: 73px;
+      margin-bottom: 67px;
+    }
+
+    &__list {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 162px;
+      height: 72px;
+      margin-right: 42px;
+      margin-bottom: 53px;
+
+      &--amount {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    &__item-amount {
+      width: auto;
+      padding: 0;
+      text-align: left;
+    }
+
+    &__item-text {
+      background: #f2f2f2;
+    }
+
+    &__item-amount .example__quantity {
+      margin-right: 60px;
+    }
+
+    &__item-amount .example__item-text {
+      padding: 0;
+    }
+  }
 }

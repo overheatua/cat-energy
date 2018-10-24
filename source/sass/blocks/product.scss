@@ -22,8 +22,9 @@
 
   &__name {
     display: block;
-    margin-top: 25px;
-    margin-bottom: 15px;
+    width: 90px;
+    margin-top: 23px;
+    margin-bottom: 10px;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
@@ -54,11 +55,12 @@
     &__list {
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: space-between;
     }
 
     &__item {
       width: 324px;
+      min-height: 431px;
       background-color: #f2f2f2;
       margin-bottom: 140px;
       flex-direction: column;
@@ -70,12 +72,12 @@
     &__link {}
 
     &__img {
-      margin-top: -100px;
+      margin-top: -81px;
     }
 
     &__info {
       width: 100%;
-      padding: 30px 38px 33px;
+      padding: 25px 38px 33px;
       align-items: center;
       justify-content: flex-end;
     }
@@ -83,8 +85,8 @@
     &__name {
       text-align: center;
       width: 135px;
-      margin-top: 0;
-      margin-bottom: 25px;
+      margin-top: 9px;
+    margin-bottom: 18px;
       font-size: 20px;
       line-height: 20px;
     }
@@ -107,6 +109,7 @@
 }
 @media (min-width: $desktop-width) {
   .product {
+    max-width: 1440px;
     padding: 0 110px;
     margin: 0 auto;
 

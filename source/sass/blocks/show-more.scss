@@ -1,9 +1,10 @@
 .show-more {
   flex-direction: column;
   align-items: center;
-  padding: 25px 20px;
+  padding: 25px 0;
   border-top: 1px solid #ededed;
   border-bottom: 1px solid #ededed;
+  margin-bottom: 0;
 
   &__link {
     display: block;
@@ -17,13 +18,13 @@
     margin: 25px 0 10px;
     font-size: 16px;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 16px;
     text-transform: uppercase;
   }
 
   &__text {
     display: block;
-    margin: 10px 0 20px;
+    margin: 0 10px 23px;
     color: #444;
     font-family: "Arial";
     font-size: 12px;
@@ -32,6 +33,7 @@
   }
 
   &__btn {
+    font-size: 16px;
     width: 100%;
     color: #444;
     background-color: #f2f2f2;
@@ -52,19 +54,24 @@
     padding: 55px 38px 40px;
     background-color: #ffffff;
     border: 1px solid #e6e6e6;
+    margin-bottom: 140px;
 
     &__link {
       width: 60px;
       height: 60px;
       background: url("../img/icon-plus.svg") no-repeat;
       opacity: 0.2;
-      margin-bottom: 47px;
+      margin-bottom: 49px;
+
     }
 
     &__desc {
       width: 140px;
       font-size: 20px;
       text-align: center;
+      line-height: 20px;
+      margin: 0;
+      margin-bottom: 20px;
     }
 
     &__text {

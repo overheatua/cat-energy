@@ -13,7 +13,7 @@
     <include src="build/img/sprite.svg"></include>
   </div>
   <header class="page-header">
-    <nav class="main-nav main-nav--closed">
+    <nav class="main-nav main-nav--index main-nav--closed">
       <ul class="main-nav__list">
         <li class="main-nav__item main-nav__item--menu">
           <img class="main-nav__img main-nav__img--logo" src="img/logo-mobile.svg" alt="Лого Кэт энерджи" width="22" height="38">
@@ -39,9 +39,9 @@
         <h2 class="promo__title">Функциональное питание для котов</h2>
         <p class="promo__text">Занялся собой? Займись котом!</p>
         <picture>
-          <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png">
-          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
-          <img src="img/index-can-mobile@1x.png" alt="банка" class="promo__img">
+          <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+          <img src="img/index-can-mobile@1x.png" class="promo__img" srcset="img/index-can-mobile@2x.png 2x" width="280" height="271" alt="Пример продукции">
         </picture>
         <a href="" class="promo__link btn">Подобрать программу</a>
       </div>
@@ -79,35 +79,42 @@
         </li>
       </ul>
     </section>
+    <h2 class="example__title">Живой пример</h2>
     <section class="example">
-      <div class="example__info">
-        <h2 class="example__title">Живой пример</h2>
-        <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <div class="example__statistics">
-          <ul class="example__list">
-            <li class="example__item">
-              <span class="example__quantity">5 кг</span>
-              <span class="example__item-text">Cнижение веса</span>
-            </li>
-            <li class="example__item">
-              <span class="example__quantity">60 дней</span>
-              <span class="example__item-text">Затрачено времени</span>
-            </li>
-            <li class="example__item example__item--amount">
-              <div class="example__item-amount">
-                <span class="example__quantity">Затраты на питание:</span>
-                <span class="example__item-text">15 000 руб.</span>
-              </div>
-            </li>
-          </ul>
+      <div class="example__wrapper">
+        <div class="example__info">
+          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <div class="example__statistics">
+            <ul class="example__list">
+              <li class="example__item">
+                <span class="example__quantity">5 кг</span>
+                <span class="example__item-text">Cнижение веса</span>
+              </li>
+              <li class="example__item">
+                <span class="example__quantity">60 дней</span>
+                <span class="example__item-text">Затрачено времени</span>
+              </li>
+              <li class="example__item example__item--amount">
+                <div class="example__item-amount">
+                  <span class="example__quantity">Затраты на питание:</span>
+                  <span class="example__item-text">15 000 руб.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="example-range">
-        <div id="comparison">
-          <figure>
-            <div id="divisor"></div>
-          </figure>
-          <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
+        <div class="example-range">
+          <div id="comparison">
+            <figure>
+              <div id="divisor"></div>
+            </figure>
+          </div>
+          <div class="example-range__controls">
+              <span class="example-range__toggle example-range__toggle--before">Было</span>
+                <input type="range" min="0" max="100" value="0" id="slider" oninput="moveDivisor()">
+                <span class="example-range__bar-status"></span>
+              <span class="example-range__toggle example-range__toggle--after">Стало</span>
+          </div>
         </div>
       </div>
     </section>
@@ -125,29 +132,46 @@
     </section>
   </main>
   <footer class="page-footer">
-    <div class="footer-logo">
-      <a href="index.html" class="footer-logo__link">
-        <img src="img/logo-footer.svg" alt="Лого" class="footer-logo__img">
-      </a>
-    </div>
-    <div class="footer-social">
-      <ul class="footer-social__list">
-        <li class="footer-social__item"><a href="" class="footer-social__link footer-social__link--vk"></a>
-          <span class="visually-hidden">Вконтакте</span>
-        </li>
-        <li class="footer-social__item"><a href="" class="footer-social__link footer-social__link--inst"></a>
-          <span class="visually-hidden">Инстаграм</span>
-        </li>
-        <li class="footer-social__item"><a href="" class="footer-social__link footer-social__link--fb"></a>
-          <span class="visually-hidden">Фейсбук</span>
-        </li>
-      </ul>
-    </div>
-    <div class="footer-copyright">
-      <a href="" class="footer-copyright__link">
-        <span class="copyright__text">HTML Academy</span>
-      </a>
-      <img src="img/logo-htmlacademy.svg" alt="HTML Academy" class="footer-copyright__img">
+    <div class="page-footer__wrapper">
+      <div class="footer-logo">
+        <a href="index.html" class="footer-logo__link">
+          <img src="img/logo-footer.svg" alt="Лого" class="footer-logo__img">
+        </a>
+      </div>
+      <div class="footer-social">
+        <ul class="footer-social__list">
+          <li class="footer-social__item">
+            <a href="" class="footer-social__link footer-social__link--vk">
+              <svg class="footer-social__icon footer-social__icon--vk" width="22" height="12">
+                <use xlink:href="#s-icon-vk"></use>
+              </svg>
+            </a>
+            <span class="visually-hidden">Вконтакте</span>
+          </li>
+          <li class="footer-social__item"><a href="" class="footer-social__link footer-social__link--inst">
+              <svg class="footer-social__icon footer-social__icon--inst" width="16" height="16">
+                <use xlink:href="#s-icon-insta"></use>
+              </svg>
+            </a>
+            <span class="visually-hidden">Инстаграм</span>
+          </li>
+          <li class="footer-social__item"><a href="" class="footer-social__link footer-social__link--fb">
+              <svg class="footer-social__icon footer-social__icon--fb" width="10" height="19">
+                <use xlink:href="#s-icon-fb"></use>
+              </svg>
+            </a>
+            <span class="visually-hidden">Фейсбук</span>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-copyright">
+        <a href="" class="footer-copyright__link">
+          <span class="copyright__text">HTML Academy</span>
+        </a>
+        <svg class="footer-copyright__img" width="27" height="34">
+          <use xlink:href="#s-icon-htmlacademy"></use>
+        </svg>
+      </div>
     </div>
   </footer>
   <script type="text/javascript" src="js/script.min.js"></script>

@@ -1,13 +1,10 @@
 .example-range {
   background-color: #f2f2f2;
-
-  &__img {
-    width: 320px;
-  }
-
-  &__images {
-    margin-bottom: 30px;
-  }
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 
   &__controls {
     display: flex;
@@ -26,97 +23,204 @@
     border: 0;
     background-color: transparent;
     cursor: pointer;
-    margin-right: 18px;
+
+    &--before {
+      margin-right: 18px;
+    }
   }
 
-  &__bar {
-    width: 84px;
-    height: 14px;
-    background-color: white;
-    border: 1px solid #cdcdcd;
-    border-radius: 6px;
-    margin-right: 18px;
+  &__bar-status {
+    display: block;
+    width: 100%;
+    max-width: 72px;
+    height: 6px;
+    background-color: #68b738;
+    border-radius: 3px;
   }
 }
-@media (min-width: $tablet-width) {
-  #comparison {
-  // width: 60vw;
-  // height: 60vw;
-  width: 768px;
-  height: 640px;
-  overflow: hidden; }
-#comparison figure {
-  background-image: url("../img/after-tablet@1x.png");
+
+#slider {
+  width: 84px;
+  height: 14px;
+  background-color: white;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+  margin-right: 18px;
+}
+
+div#comparison {
+  width: 280px;
+  height: 240px;
+  max-width: 280px;
+  max-height: 240px;
+  overflow: hidden;
+}
+
+div#comparison figure {
+  background-image: url("../img/before-mobile@1x.png");
   background-size: cover;
   position: relative;
   font-size: 0;
   width: 100%;
   height: 100%;
   margin: 0;
-  background-color: #eaeaea;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/before-mobile@2x.png");
+  }
 }
+
 div#comparison figure > img {
   position: relative;
   width: 100%;
 }
+
 div#comparison figure div {
-  background-image: url("../img/before-tablet@1x.png");
+  background-image: url("../img/after-mobile@1x.png");
   background-size: cover;
+background-color: #f2f2f2;
   position: absolute;
-  width: 50%;
+  width: 0;
   box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
   overflow: hidden;
   bottom: 0;
   height: 100%;
-background-color: #f2f2f2;
+  transition: all 0.5s ease-in-out;
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/after-mobile@2x.png");
+  }
 }
 
-input[type=range]{
-  -webkit-appearance:none;
-  -moz-appearance:none;
-  position: relative;
-  top: -2rem; left: -2%;
+input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   background-color: rgba(255,255,255,0.1);
   width: 102%;
 }
+
 input[type=range]:focus {
   outline: none;
 }
+
 input[type=range]:active {
   outline: none;
 }
 
 input[type=range]::-moz-range-track {
-  -moz-appearance:none;
-    height:15px;
-    width: 98%;
-    background-color: rgba(255,255,255,0.1);
-    position: relative;
-    outline: none;
- }
+  -moz-appearance: none;
+  height: 15px;
+  width: 98%;
+  background-color: rgba(255,255,255,0.1);
+  position: relative;
+  outline: none;
+}
+
 input[type=range]::active {
   border: none;
   outline: none;
 }
+
 input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance:none;
-    width: 20px; height: 15px;
-    background: #fff;
-    border-radius: 0;
-   }
+  -webkit-appearance: none;
+  width: 34px;
+  height: 34px;
+  background-color: white;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
 input[type=range]::-moz-range-thumb {
   -moz-appearance: none;
-  width: 20px;
-  height: 15px;
-  background: #fff;
-  border-radius: 0;
-     }
-input[type=range]:focus::-webkit-slider-thumb {
-    background: rgba(255,255,255,0.5);
-   }
-input[type=range]:focus::-moz-range-thumb {
-    background: rgba(255,255,255,0.5);
-   }
-
+  width: 34px;
+  height: 34px;
+  background-color: white;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
-@media (min-width: $desktop-width) {}
+
+input[type=range]:focus::-webkit-slider-thumb {
+  background: rgba(255,255,255,0.5);
+}
+
+input[type=range]:active::-webkit-slider-thumb {
+  border: 2px solid #68b738;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+input[type=range]:focus::-moz-range-thumb {
+  background: rgba(255,255,255,0.5);
+}
+@media (min-width: $tablet-width) {
+  .example-range {
+    min-height: 620px;
+    justify-content: flex-start;
+
+    &__toggle {
+      font-size: 20px;
+      line-height: 20px;
+
+      &--before {
+        margin-right: 24px;
+      }
+    }
+
+    &__bar-status {
+      display: none;
+    }
+  }
+
+  #slider {
+    width: 428px;
+    height: 6px;
+    background-color: gainsboro;
+    border-radius: 3px;
+    margin-right: 24px;
+  }
+
+  div#comparison {
+    width: 690px;
+    height: 516px;
+    max-width: 690px;
+    max-height: 516px;
+    margin-bottom: 20px;
+  }
+
+  div#comparison figure {
+    background-image: url("../img/before-tablet@1x.png");
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/before-tablet@2x.png");
+    }
+  }
+
+  div#comparison figure div {
+    background-image: url("../img/after-tablet@1x.png");
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/after-tablet@2x.png");
+    }
+  }
+}
+@media (min-width: $desktop-width) {
+  .example-range {
+    min-height: 0;
+  }
+  div#comparison {
+    width: 510px;
+    height: 382px;
+
+  }
+  div#comparison figure {
+    background-image: url("../img/before-desktop@1x.png");
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/before-desktop@2x.png");
+    }
+  }
+
+  div#comparison figure div {
+    background-image: url("../img/after-desktop@1x.png");
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/after-desktop@2x.png");
+    }
+  }
+}

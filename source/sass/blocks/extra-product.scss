@@ -7,8 +7,8 @@
   &__title {
     font-size: 24px;
     font-weight: 400;
-    line-height: 24px;
-    margin: 25px;
+    line-height: 46px;
+    margin: 20px;
   }
 
   &__line {
@@ -22,13 +22,13 @@
     @include list-reset;
     display: flex;
     flex-wrap: wrap;
-    border-top: 1px solid #cdcdcd;
     padding: 0 20px;
   }
 
   &__item {
     padding: 14px 0 17px;
     width: 100%;
+    border-top: 1px solid #cdcdcd;
     border-bottom: 1px solid #cdcdcd;
   }
 
@@ -39,7 +39,7 @@
     font-weight: 400;
     line-height: 16px;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 9px;
   }
 
   &__table {
@@ -49,7 +49,7 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 14px;
-    margin-bottom: 15px;
+    margin-bottom: 13px;
   }
 
   &__row {
@@ -72,6 +72,9 @@
     background: url("../img/gift-photo-mobile@1x.jpg") no-repeat;
     background-position: center;
     background-size: cover;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/gift-photo-mobile@2x.jpg");
+    }
   }
 
   &__promo-icon {
@@ -93,18 +96,21 @@
     &__wrapper {
       margin-top: -140px;
       margin-left: 30px;
-      min-height: 182px;
+      min-height: 168px;
+    margin-bottom: 13px;
+
     }
 
     &__title {
       position: relative;
       font-size: 36px;
       line-height: 36px;
+      margin: 0 37px;
 
       &::before {
         content: "";
         position: absolute;
-        left: -55px;
+        left: -67px;
         top: 17px;
         width: 30px;
         height: 3px;
@@ -120,7 +126,7 @@
     &__item {
       display: flex;
       flex-wrap: wrap;
-      padding: 26px 37px;
+      padding: 22px 36px 28px 37px;
       border: 1px solid #cdcdcd;
       border-bottom: 0;
 
@@ -130,24 +136,33 @@
     }
 
     &__name {
-      width: 60%;
+      flex-grow: 1;
       font-size: 20px;
       line-height: 26px;
+      margin-bottom: 24px;
     }
 
     &__table {
-      width: 40%;
+      width: auto;
       font-size: 16px;
       line-height: 20px;
       text-align: right;
     }
+&__cell:first-child {
+    margin-right: 46px;
 
+}
     &__promo {
       width: 708px;
       min-height: 200px;
       margin: 69px auto 76px;
       padding: 65px 115px 75px 90px;
       flex-direction: row;
+      background: url("../img/gift-photo-tablet@1x.jpg") no-repeat;
+      background-size: cover;
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/gift-photo-tablet@2x.jpg");
+      }
     }
 
     &__promo-link {
@@ -165,14 +180,15 @@
 
     &__wrapper {
       width: 100%;
-      margin-left: 110px;
+      margin-left: 71px;
       min-height: 191px;
+      margin-bottom: 0;
     }
 
     &__title {
       &::before {
         width: 110px;
-        left: -135px;
+        left: -148px;
       }
     }
 
@@ -192,7 +208,8 @@
     }
 
     &__name {
-      width: 325px;
+      width: 285px;
+      flex-grow: 0;
       margin: 0;
     }
 
@@ -214,6 +231,11 @@
       height: 289px;
       margin: 0;
       padding: 65px 37px 28px;
+      background: url("../img/gift-photo-desktop@1x.jpg") no-repeat;
+      background-size: cover;
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/gift-photo-desktop@2x.jpg");
+      }
     }
 
     &__promo-icon {

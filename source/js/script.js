@@ -10,9 +10,23 @@ navToggle.addEventListener('click', function() {
     navMain.classList.remove('main-nav--opened');
   }
 });
-
+var beforeToggle = document.querySelector('.example-range__toggle--before');
+var afterToggle = document.querySelector('.example-range__toggle--after');
 var divisor = document.getElementById("divisor"),
 slider = document.getElementById("slider");
+if (beforeToggle) {
+  beforeToggle.addEventListener('click', function() {
+    divisor.style.width = 0+"%";
+    slider.value = 0;
+  });
+}
+if (afterToggle) {
+  afterToggle.addEventListener('click', function() {
+    divisor.style.width = 100+"%";
+    slider.value = 100;
+  });
+}
+
 function moveDivisor() {
 	divisor.style.width = slider.value+"%";
 }

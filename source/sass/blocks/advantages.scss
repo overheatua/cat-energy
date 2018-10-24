@@ -2,7 +2,7 @@
   padding: 0 20px 25px;
 
   &__title {
-    margin: 0 0 30px;
+    margin: 23px 0 38px;
     padding: 0;
     font-size: 36px;
     font-weight: 400;
@@ -31,22 +31,35 @@
       background-color: $green;
       background-position: center;
       background-repeat: no-repeat;
+      background-size: cover;
     }
 
     &--icon-1::before {
       background-image: url("../img/advantage-leaf@1x.png");
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/advantage-leaf@2x.png");
+      }
     }
 
     &--icon-2::before {
       background-image: url("../img/advantage-powder@1x.png");
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/advantage-powder@2x.png");
+      }
     }
 
     &--icon-3::before {
       background-image: url("../img/advantage-dining@1x.png");
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/advantage-dining@2x.png");
+      }
     }
 
     &--icon-4::before {
       background-image: url("../img/advantage-clock@1x.png");
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/advantage-clock@2x.png");
+      }
     }
   }
 
@@ -66,9 +79,10 @@
     padding: 0 30px;
 
     &__title {
+      margin: 0;
       font-size: 60px;
       line-height: 60px;
-      margin-bottom: 70px;
+      margin-bottom: 72px;
     }
 
     &__list {
@@ -79,9 +93,9 @@
     }
 
     &__item {
-      width: 45%;
+          width: 324px;
       min-height: 230px;
-      margin: 0 0 65px;
+      margin: 0 0 87px;
       align-items: flex-start;
 
       &::before {
@@ -97,7 +111,7 @@
         color: #f2f2f2;
         font-size: 281px;
         top: -40px;
-        left: 127px;
+        left: 120px;
         line-height: 281px;
       }
 
@@ -107,7 +121,7 @@
         color: #f2f2f2;
         font-size: 281px;
         top: -40px;
-        left: 127px;
+        left: 110px;
         line-height: 281px;
       }
 
@@ -117,7 +131,7 @@
         color: #f2f2f2;
         font-size: 281px;
         top: -40px;
-        left: 127px;
+        left: 112px;
         line-height: 281px;
       }
 
@@ -127,15 +141,15 @@
         color: #f2f2f2;
         font-size: 281px;
         top: -40px;
-        left: 127px;
+        left: 112px;
         line-height: 281px;
       }
     }
 
     &__text {
-      margin-top: 115px;
+      margin-top: 113px;
       padding-left: 0;
-      padding-right: 130px;
+      padding-right: 60px;
       font-size: 16px;
       line-height: 24px;
       z-index: 1;
@@ -155,7 +169,10 @@
 
     &__item {
       width: 245px;
-      margin-bottom: 80px;
+      margin-bottom: 0;
+      &::before {
+        background-size: 53px 53px;
+      }
     }
 
     &__text {

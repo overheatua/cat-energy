@@ -83,7 +83,7 @@ gulp.task("html", function() {
 
 gulp.task("minJs", function(cb) {
   pump([
-      gulp.src("build/js/*.js"),
+      gulp.src("source/js/*.js"),
       uglify(),
       rename({
         suffix: ".min"
